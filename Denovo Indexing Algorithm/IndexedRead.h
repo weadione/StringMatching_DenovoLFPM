@@ -11,7 +11,7 @@ public:
 	int indexNum;			//colIndex의 개수
 	bool isFound;			//빈도패턴이 발견 되었는지 유무(DenovoLFPM::FindReadIndex에서 사용됨)
 	vector<string> suPrefix;	/*발견된 빈도패턴의 앞뒤로 t만큼의 접두 접미사 부분을 저장
-								만약 AGCTTGCAAA에서 TTGC가 패턴이면 
+								만약 AGCTTGCAAA에서 TTGC가 패턴이고 t=3이면
 								AGC가 접두부 AAA가 접미부로
 								결과적으로 AGCAAA가 저장됨*/
 

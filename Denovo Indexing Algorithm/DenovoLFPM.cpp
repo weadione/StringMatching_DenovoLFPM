@@ -69,7 +69,7 @@ void DenovoLFPM::MergeShortRead() {
 				isMatch = false;
 				iter1 = indexShortPos.begin();
 				a++;	//디버그용
-				//cout << a++ << endl;
+				//cout << a << endl;
 			}
 			iter2 = iter1 + 1;
 			for (int j = i + 1; j < indexShortPos.size(); j++, iter2++) {
@@ -119,11 +119,11 @@ void DenovoLFPM::MergeShortRead() {
 							NewIndexRead.CalSuPrefix(t);	//새로운 suPrefix 계산
 							NewIndexRead.rowIndex = shortReadSet.size();
 
-							shortReadSet.append(NewIndexRead.value );	//매칭되어 새롭게 생성된 ShortRead 내용을 삽입
+							shortReadSet.append(NewIndexRead.value );	//매칭되어 새롭게 생성된 NewShortRead 내용을 삽입
 							shortReadSet.append("\n");
 							indexShortPos.push_back(NewIndexRead);
 
-							deleteShortPos.push_back(indexShortPos[j]);	//매칭성공했으므로 중복 매칭 방지를 위해 삭제 리스트에 삽입
+							deleteShortPos.push_back(indexShortPos[j]);	//매칭성공했으므로 중복 매칭 방지를 위해 사용된 ShortRead를 삭제 리스트에 삽입
 							deleteShortPos.push_back(indexShortPos[i]);	
 
 							indexShortPos.erase(iter2);	//기존 목록에서 삭제(뒤에서부터)
@@ -131,7 +131,7 @@ void DenovoLFPM::MergeShortRead() {
 
 							readNum--;	//ShortRead 개수 한개 줄임
 							iter1 = indexShortPos.begin();	//새로운 ShortRead가 들어왔으므로 처음부터 다시 매칭
-							i = -1;	//i++을 고려한 
+							i = -1;	//i++을 고려한 초기화
 						}
 						if (isMatch)
 							break;
