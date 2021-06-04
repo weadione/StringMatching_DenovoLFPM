@@ -1,0 +1,14 @@
+﻿  DenovoLFPM.cpp
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(34,40): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(100,48): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(103,53): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(112,53): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(120,51): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(150,45): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(153,3): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다.
+  7 of 491 functions ( 1.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    5 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  Denovo Indexing Algorithm.vcxproj -> C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\x64\Release\Denovo Indexing Algorithm.exe
