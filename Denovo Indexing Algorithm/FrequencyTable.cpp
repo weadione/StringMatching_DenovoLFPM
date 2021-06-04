@@ -22,9 +22,9 @@ void FrequencyTable::InitializeDNA() {
 }
 
 void FrequencyTable::FillFrequencyTable() {
+	cout << "빈도 수 테이블 생성 시작" << endl;
 	string shortReads = DNA.getShortRead();
 	istringstream ss(shortReads);
-
 	string line, window;
 	while (ss>>line){	//\n을 구분자로 ShortRead를 문장단위로 가져옴
 		for (int i = 0; i < k - 7; i++) {

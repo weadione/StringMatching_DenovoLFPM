@@ -23,4 +23,5 @@ public:
 	void FindReadIndex(string frequencyPattern);	//frequencyPattern을 가지고 있는 ShortRead들을 탐색해서 indexShortPos에 추가
 	void MergeShortRead();
 	void print();	//Result.txt파일에 실행결과로 나온 DNA 저장
+	void GetAccuracy();		//정확도 계산 및 출력
 };

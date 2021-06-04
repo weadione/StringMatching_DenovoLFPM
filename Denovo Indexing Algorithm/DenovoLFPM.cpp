@@ -36,11 +36,13 @@ void DenovoLFPM::FindReadIndex(string frequencyPattern) {
 }
 
 void DenovoLFPM::MergeShortRead() {
+	cout << "매칭 알고리즘 시작" << endl;
 	int cnt = 0;	//탐색할 빈도수 테이블의 인덱스
 	bool isMatch = false;	//매칭이 일어났는지 여부(반복문 탈출에 사용)
-
+	int repeatNum=0;
+	int repeatRead = 0;
 	while (cnt<65000 && readNum>1){	//빈도수 테이블을 모두 탐색하거나 or 남음 ShortRead의 개수가 1개가 되거나
-		if (cnt >= 25000) {	//cnt가 25000이상이면 사실상 더 이상의 매칭이 어렵다보고 suPrefix의 값을 4->3으로 바꾸서 재탐색(양날의 검)
+		if (cnt >= 25000) {	
 			if (t > 3) {
 				t = 3;
 				cnt = 0;
@@ -48,8 +50,15 @@ void DenovoLFPM::MergeShortRead() {
 			else
 				break;
 		}
-		int a = 0;	//디버그용
-		cout << readNum << " "<<cnt<<endl;	//디버그용 주석처리시 속도 상승함
+		if (repeatNum > 5000)	//리드수가 더이상 줄어들지 않은 상태로 5000cnt가 지나면 탈출
+			break;
+		if (repeatRead == readNum)
+			repeatNum++;
+		else
+			repeatNum = 0;
+		repeatRead = readNum;
+		//int a = 0;	//디버그용
+		//cout << readNum << " "<<cnt<<endl;	//디버그용 주석처리시 속도 상승함
 
 		if (Table.getTableFrequeny()[cnt] <= 1) {	//만약 빈도수 테이블의 결과가 1이면 탈출(ShortRead 탐색결과 1번 나왔다는 의미이므로 더 이상의 탐색은 무의미)
 			break;
@@ -57,10 +66,10 @@ void DenovoLFPM::MergeShortRead() {
 
 		FindReadIndex(Table.getTablePattern()[cnt++]);	//cnt번지의 빈도패턴을 가져와서 해당 빈도패턴을 가지는 ShortRead 탐색
 		
-		//if (indexShortPos.size() == 0) {	//디버그용
-		//	//cout << shortReadSet;
-		//	continue;
-		//}
+		if (indexShortPos.size() == 0) {	//디버그용
+			//cout << shortreadset;
+			continue;
+		}
 		
 		vector<IndexedRead>::iterator iter1 = indexShortPos.begin();
 		vector<IndexedRead>::iterator iter2;
@@ -68,7 +77,7 @@ void DenovoLFPM::MergeShortRead() {
 			if (isMatch) {	//매칭시 처음부터 다시 탐색을 위한 변수 초기화
 				isMatch = false;
 				iter1 = indexShortPos.begin();
-				a++;	//디버그용
+				//a++;	//디버그용
 				//cout << a << endl;
 			}
 			iter2 = iter1 + 1;
@@ -115,6 +124,11 @@ void DenovoLFPM::MergeShortRead() {
 									NewIndexRead.AddIndex(indexShortPos[j].colIndex[postIndex] + preSize - indexShortPos[j].colIndex[num2],t);
 								}
 							}
+							deleteShortPos.push_back(indexShortPos[j]);	//매칭성공했으므로 중복 매칭 방지를 위해 사용된 ShortRead를 삭제 리스트에 삽입
+							deleteShortPos.push_back(indexShortPos[i]);
+
+							indexShortPos.erase(iter2);	//기존 목록에서 삭제(뒤에서부터)
+							indexShortPos.erase(iter1);
 
 							NewIndexRead.CalSuPrefix(t);	//새로운 suPrefix 계산
 							NewIndexRead.rowIndex = shortReadSet.size();
@@ -123,11 +137,7 @@ void DenovoLFPM::MergeShortRead() {
 							shortReadSet.append("\n");
 							indexShortPos.push_back(NewIndexRead);
 
-							deleteShortPos.push_back(indexShortPos[j]);	//매칭성공했으므로 중복 매칭 방지를 위해 사용된 ShortRead를 삭제 리스트에 삽입
-							deleteShortPos.push_back(indexShortPos[i]);	
 
-							indexShortPos.erase(iter2);	//기존 목록에서 삭제(뒤에서부터)
-							indexShortPos.erase(iter1);
 
 							readNum--;	//ShortRead 개수 한개 줄임
 							iter1 = indexShortPos.begin();	//새로운 ShortRead가 들어왔으므로 처음부터 다시 매칭
@@ -212,6 +222,32 @@ void DenovoLFPM::print() {
 }
 
 
+void DenovoLFPM::GetAccuracy() {
+	string myDNA = Table.DNA.getMyDNA();
+	istringstream ss(shortReadSet);
+
+	string line, window;
+	int rowIndex = 0;
+	int num = 0;
+	int maxMatch = 0;
+	cout << "<매칭 결과>" << endl << readNum << "개의 문자열로 매칭됨" << endl;
+	while (ss >> line) {	//\n을 구분자로 ShortRead를 문장단위로 가져옴
+		num++;
+		maxMatch = 0;
+		for (int i = 0; i < M - line.size() + 1; i++) {
+			int match = 0;
+			for (int j=0; j < line.size(); j++) {
+				if (myDNA[i+j] == line[j])
+					match++;
+			}
+			if (maxMatch < match)
+				maxMatch = match;
+
+		}
+		cout << num << "번: " << ((double)maxMatch / (double)M) * 100 << "%" << endl;
+	}
+}
+
 int main() {
 	clock_t start, finish;
 	double duration;
@@ -222,7 +258,7 @@ int main() {
 	finish = clock();
 
 	test.print();
-
 	duration = (double)(finish - start) / CLOCKS_PER_SEC;
 	cout << duration << "초 소요" << endl;
+	test.GetAccuracy();
 }

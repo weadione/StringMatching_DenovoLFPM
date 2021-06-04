@@ -100,7 +100,6 @@ string GenerateDNA::getShortRead() {
 }
 
 void GenerateDNA::Clear() {
-	myDNA = "";
 	shortRead = "";
 }
 

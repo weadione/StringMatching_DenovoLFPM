@@ -14,5 +14,5 @@ public:
 	void MkShortRead();	//기존 저장된 ShortRead위에 새로운 ShortRead 덮어쓰기 메서드
 	string getMyDNA();	//myDNA반환 메서드
 	string getShortRead();	//ShortRead 반환 메서드
-	void Clear();		//메모리 공간을 아끼기위한  myDNA, shortRead 삭제 메서드
+	void Clear();		//메모리 공간을 아끼기위한  shortRead 삭제 메서드
 };
