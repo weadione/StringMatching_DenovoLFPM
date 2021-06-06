@@ -24,7 +24,10 @@
     <ClCompile Include="IndexedRead.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="DenovoLFPM.cpp">
+    <ClCompile Include="DenovoMFPM.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +44,7 @@
     <ClInclude Include="IndexedRead.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DenovoLFPM.h">
+    <ClInclude Include="DenovoMFPM.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

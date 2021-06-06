@@ -118,17 +118,17 @@ string* FrequencyTable::getTablePattern() {
 
 //int main() {	//테이블 테스트용
 //	FrequencyTable test;
-//	//test.InitializeDNA();
+//	test.InitializeDNA();
 //	test.FillFrequencyTable();
 //	test.SortTable();
-//	test.printTable();
+//	//test.printTable();
 //
 //
 //
 //	string myDNA = test.DNA.getMyDNA();
 //
 //
-//	int arr[5] = { 0 };
+//	int arr[4] = { 0 };
 //	char c = 'A';
 //	for (int i = 0; i < myDNA.size(); i++){
 //		c = myDNA[i];
@@ -146,19 +146,23 @@ string* FrequencyTable::getTablePattern() {
 //			arr[3]++;
 //			break;
 //		default:
-//			arr[4]++;
 //			break;
 //		}
 //	}	
-//	
-//	for (int i = 0; i < 5; i++) {
-//		cout << arr[i] << endl;
-//		arr[i] = 0;
-//	}
+//
+//	cout << endl;
+//	cout << "-" << M << "길이의 DNA에 대한 각 염기서열의 분포-" << endl;
+//	cout << "A:" << arr[0] << "개(" << (double)arr[0] / M * 100 << "%)" << endl;
+//	cout << "G:" << arr[1] << "개(" << (double)arr[1] / M * 100 << "%)" << endl;
+//	cout << "C:" << arr[2] << "개(" << (double)arr[2] / M * 100 << "%)" << endl;
+//	cout << "T:" << arr[3] << "개(" << (double)arr[3] / M * 100 << "%)" << endl;
 //
 //
 //	myDNA =test.DNA.getShortRead();
 //
+//
+//	for (int i = 0; i < 4; i++)
+//		arr[i] = 0;
 //
 //	for (int i = 0; i < myDNA.size(); i++)
 //	{
@@ -177,12 +181,14 @@ string* FrequencyTable::getTablePattern() {
 //			arr[3]++;
 //			break;
 //		default:
-//			arr[4]++;
 //			break;
 //		}
 //	}
-//	for (int i = 0; i < 5; i++) {
-//		cout << arr[i] << endl;
-//		arr[i] = 0;
-//	}
+//
+//	cout << endl;
+//	cout << "-" << k << "길이, "<< n <<"개의 ShortRead에 대한 각 염기서열의 분포-" << endl;
+//	cout << "A:" << arr[0] << "개(" << (double)arr[0] / (k * n) * 100 << "%)" << endl;
+//	cout << "G:" << arr[1] << "개(" << (double)arr[1] / (k * n) * 100 << "%)" << endl;
+//	cout << "C:" << arr[2] << "개(" << (double)arr[2] / (k * n) * 100 << "%)" << endl;
+//	cout << "T:" << arr[3] << "개(" << (double)arr[3] / (k * n) * 100 << "%)" << endl;
 //}

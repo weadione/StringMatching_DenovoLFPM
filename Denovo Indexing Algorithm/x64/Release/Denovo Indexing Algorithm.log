@@ -1,11 +1,12 @@
-﻿  DenovoLFPM.cpp
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(34,40): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(109,48): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(112,53): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(121,53): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(134,51): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(160,45): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoLFPM.cpp(163,3): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  DenovoMFPM.cpp
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(20,38): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(65,40): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(140,48): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(143,53): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(152,53): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(165,51): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(191,45): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\DenovoMFPM.cpp(194,3): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   FrequencyTable.cpp
 C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\FrequencyTable.cpp(7,13): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\FrequencyTable.cpp(39,38): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -15,9 +16,10 @@ C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\FrequencyTable.cpp
   GenerateDNA.cpp
   IndexedRead.cpp
 C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\IndexedRead.cpp(15,20): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Main.cpp
   코드를 생성하고 있습니다.
-  3 of 493 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+  5 of 610 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    5 functions had inline decision re-evaluated but remain unchanged
+    2 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Denovo Indexing Algorithm.vcxproj -> C:\GitHub\StringMatching_DenovoLFPM\Denovo Indexing Algorithm\x64\Release\Denovo Indexing Algorithm.exe

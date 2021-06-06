@@ -139,13 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DenovoLFPM.cpp" />
+    <ClCompile Include="DenovoMFPM.cpp" />
     <ClCompile Include="FrequencyTable.cpp" />
     <ClCompile Include="GenerateDNA.cpp" />
     <ClCompile Include="IndexedRead.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DenovoLFPM.h" />
+    <ClInclude Include="DenovoMFPM.h" />
     <ClInclude Include="FrequencyTable.h" />
     <ClInclude Include="GenerateDNA.h" />
     <ClInclude Include="header.h" />

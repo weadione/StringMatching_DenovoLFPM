@@ -6,10 +6,12 @@
 #include <sstream>
 #include <cmath>
 #include <ctime>
+#include <thread>
+#include <mutex>
 
-#define n 100000 //shortRead 갯수
-#define k 50	//shortRead 길이
-#define M 100000	//전체 DNA 길이
-//#define t 2	//DenovoLFPM의 멤버변수로 이전함
+#define n 500000 //shortRead 갯수
+#define k 40	//shortRead 길이
+#define M 500000	//전체 DNA 길이
+//#define t 2	//DenovoMFPM의 멤버변수로 이전함
 
 using namespace std;
