@@ -1,9 +1,9 @@
 #include "GenerateDNA.h"
 
 
-GenerateDNA::GenerateDNA() {
-	myDNA = LoadDNA("myDNA");
-	shortRead = LoadDNA("shortRead");
+GenerateDNA::GenerateDNA() {	//기존의 데이터 불러오기
+	myDNA = LoadDNA("mydna");
+	shortRead = LoadDNA("shortread");
 }
 
 //매개변수로 입력받은 크기만큼의 ATGC로 이루어진 string 반환
@@ -35,7 +35,7 @@ void GenerateDNA::MkDNA() {
 	}
 
 
-	SaveDNA(myDNA, "myDNA");
+	SaveDNA(myDNA, "mydna");
 }
 
 
@@ -52,7 +52,7 @@ void GenerateDNA::MkShortRead() {
 		shortRead.append(myDNA.substr(dis(gen), k)+"\n");
 	}
 
-	SaveDNA(shortRead, "shortRead");
+	SaveDNA(shortRead, "shortread");
 
 }
 

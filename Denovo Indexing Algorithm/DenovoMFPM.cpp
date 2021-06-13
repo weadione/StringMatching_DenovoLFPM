@@ -1,7 +1,7 @@
 #include "DenovoMFPM.h"
 
 DenovoMFPM::DenovoMFPM() {
-	Table.InitializeDNA();	//DNA를 새로 생성하는 메서드로 상황에 따라서 주석처리
+	//Table.InitializeDNA();	//DNA를 새로 생성하는 메서드로 상황에 따라서 주석처리
 	Table.FillFrequencyTable();
 	Table.SortTable();
 

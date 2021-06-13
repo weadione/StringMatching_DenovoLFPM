@@ -115,12 +115,12 @@ int* FrequencyTable::getTableFrequeny() {
 string* FrequencyTable::getTablePattern() {
 	return tablePattern;
 }
-
+//
 //int main() {	//테이블 테스트용
 //	FrequencyTable test;
 //	test.InitializeDNA();
-//	test.FillFrequencyTable();
-//	test.SortTable();
+//	//test.FillFrequencyTable();
+//	//test.SortTable();
 //	//test.printTable();
 //
 //

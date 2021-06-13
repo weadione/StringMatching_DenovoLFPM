@@ -12,7 +12,7 @@ private:
 
 	string shortReadSet;		//ShortRead의 전체 문자열
 	int readNum;			//남아있는 ShortReadd의 개수
-	int t = 5;	/*찾은 인덱스 앞뒤로 탐색할 길이
+	int t = 6;	/*찾은 인덱스 앞뒤로 탐색할 길이
 				(ex. 만약 t가 4이면 8개의 매칭된 패턴 앞뒤로 각각 4개씩 더 비교해
 				총 16개가 같아야 이어진 read라고 판별)*/
 
